@@ -1,8 +1,4 @@
-FROM ubuntu:latest
+FROM node:6
 
-RUN apt-get update && apt-get install -y \
-  curl \
-  git
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
-RUN apt-get update && apt-get install -y nodejs
+RUN apt-get update
 RUN npm install -g ask-cli
